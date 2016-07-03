@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Rock+Salt|Reenie+Beanie|Sue+Ellen+Francisco|Just+Me+Again+Down+Here);
+body {
+  background: white; }
+
+.ham {
+  display: none; }
+
+.side-menu {
+  width: 25vw;
+  height: 100vh;
+  float: left;
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around; }
+
+.header {
+  position: relative; }
+
+#name {
+  font-family: Sue Ellen Francisco;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  transform: rotate(6deg);
+  margin-top: 50px;
+  margin-bottom: -200px; }
+
+.nav-items {
+  display: flex;
+  height: 40vh;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  text-align: center;
+  font-family: Sue Ellen Francisco;
+  font-size: 1.2rem;
+  cursor: default; }
+
+.nav-items li:hover {
+  color: #F64546; }
+
+.projects {
+  position: relative;
+  width: 75vw;
+  float: right;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 22vh;
+  margin-bottom: 20vh; }
+
+.project-wrapper {
+  margin: auto;
+  margin-bottom: 100px;
+  border-radius: 1vh;
+  box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.4); }
+
+.project-wrapper:last-child {
+  margin-bottom: 0; }
+
+.window-top {
+  background: #DCDADC;
+  width: 60vw;
+  height: 20px;
+  border-radius: 1vh 1vh 0 0; }
+
+.button {
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin: 0.5vh 1px 1px 10px;
+  border-radius: 100%; }
+
+#coral {
+  background: #F64546; }
+
+#sun {
+  background: #FBAF15; }
+
+#lime {
+  background: #38C229; }
+
+.project-shot {
+  margin-bottom: -3px; }
+
+.project-shot img {
+  width: 60vw; }
+
+.project-shot:hover {
+  opacity: 0.2; }
+
+.window-bottom {
+  background: #DCDADC;
+  width: 60vw;
+  height: 20px;
+  border-radius: 0 0 1vh 1vh; }
+
+@media (max-width: 500px) {
+  .side-menu {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    float: none;
+    display: inline-block;
+    background: white;
+    z-index: 2; }
+  .ham {
+    display: block; }
+  #name {
+    margin: 0;
+    margin-top: 50px; }
+  .nav-items {
+    display: none;
+    flex-flow: row nowrap; }
+  .projects {
+    width: 100vw;
+    float: none; }
+  .project-wrapper {
+    width: 80vw; }
+  .project-wrapper img {
+    width: 80vw; }
+  .window-top, .window-bottom {
+    width: 80vw; } }
