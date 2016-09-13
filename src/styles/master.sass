@@ -1,12 +1,17 @@
 @import _variables
+@import _mixins
+
+// @include font-face(Norse, './www/assets/font/Norse.otf')
+@include font-face(Knarf, '../assets/font/knarfart', null, null, ttf)
 
 body
   height: 200vh
+  width: 100vw
 .header
+  backface-visibility: hidden
+  position: fixed
   height: 60px
   width: 100vw
-  position: fixed
-  // background-color: $banner
   display: flex
   transition: all 0.4s
   z-index: 1
@@ -15,23 +20,29 @@ body
     margin-left: $medium
     height: 4vh
 .header_active
-  background-color: $banner
+  // background-color: $primary-dark
 .intro
-  height: 600px
+  height: 420px
   background-color: $primary-dark
   display: flex
   justify-content: space-around
   #logo
+    @extend .squiggly
     width: 20vw
+    font-size: 20rem
+    font-family: 'Knarf', sans-serif
+    letter-spacing: -15px
+    // margin-top: 50vh
+    // transform: translateY(-50%)
 .skew_intro
   content: ''
   position: absolute
   left: 0
-  top: 550px
+  top: 400px
   width: 100%
-  height: 60px
+  height: 80px
   background: $primary-dark
-  transform: skewY(3.3deg)
+  transform: skewY(3deg)
   z-index: 0
   transition: transform 0.6s
 .reset_skew
@@ -39,3 +50,29 @@ body
 .second
   height: 600px
   background-color: $alto
+  #hummingbird
+    width: 100vw
+    height: 100%
+    overflow: hidden
+    img
+      // height: 200px
+      overflow: hidden
+      max-width: 90vw
+      position: absolute
+      left: 200px
+      margin-top: 200px
+      transition: left 1s
+
+@keyframes squigglevision
+  // 0%
+  //   filter: url('#squiggly-0')
+  25%
+    filter: url('#glitch-0')
+  50%
+    filter: url('#glitch-0')
+  75%
+    filter: url('#glitch-0')
+  100%
+    filter: url('#glitch-4')
+.squiggly
+  animation: squigglevision 5s linear infinite

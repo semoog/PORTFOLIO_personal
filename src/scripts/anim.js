@@ -1,6 +1,6 @@
 $(window)
 	.on("scroll", function() {
-		if ($(window).scrollTop() > 300) {
+		if ($(window).scrollTop() > 200) {
 			$(".header").addClass("header_active");
 			$(".skew_intro").addClass("reset_skew");
 		} else {
